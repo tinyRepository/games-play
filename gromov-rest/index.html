@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Громов и сыновья — сеть ресторанов домашней кухни</title>
+<meta name="description" content="Семь ресторанов домашней кухни в Москве с 1998 года. Утка с яблоками, «Наполеон» по семейному рецепту и десерты без сахара.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --red: #8e3420; --cream: #f7f0e3; --ink: #2b211b; --gold: #b8904f; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font: 17px/1.6 'Nunito', system-ui, sans-serif; }
+  header { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 14px; padding: 12px 20px; background: #fffaf2; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); }
+  .logo { width: 44px; height: 44px; display: grid; place-items: center; border: 2px solid var(--red); border-radius: 50%; color: var(--red); font: 700 24px 'PT Serif', serif; }
+  header b { font: 700 19px 'PT Serif', serif; }
+  header nav { margin-left: auto; display: flex; gap: 18px; font-weight: 700; font-size: 15px; }
+  header nav a { color: var(--ink); text-decoration: none; }
+  .hero { padding: 70px 20px 60px; text-align: center; color: #fff; background: linear-gradient(rgba(40, 20, 10, 0.55), rgba(40, 20, 10, 0.7)), radial-gradient(circle at 30% 30%, #c8743c, #5e2418 70%); }
+  .hero h1 { margin: 0 0 12px; font: 700 clamp(34px, 7vw, 58px)/1.1 'PT Serif', serif; }
+  .hero p { margin: 0 auto 24px; max-width: 560px; opacity: 0.92; }
+  .button { display: inline-block; padding: 14px 26px; border-radius: 30px; background: var(--gold); color: #24170c; font-weight: 800; text-decoration: none; }
+  section { max-width: 980px; margin: 0 auto; padding: 50px 20px 10px; }
+  h2 { font: 700 32px 'PT Serif', serif; margin: 0 0 18px; color: var(--red); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { padding: 18px 20px; border-radius: 16px; background: #fff; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06); }
+  .card h3 { margin: 0 0 6px; font: 700 20px 'PT Serif', serif; }
+  .card small { color: #8a7a6c; }
+  .dish { display: flex; justify-content: space-between; gap: 10px; padding: 10px 0; border-bottom: 1px dotted var(--gold); }
+  .dish span { color: #8a7a6c; }
+  .team { display: flex; gap: 16px; align-items: center; }
+  .team img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; }
+  .review { margin-bottom: 14px; }
+  .review .stars { color: var(--gold); letter-spacing: 2px; }
+  .review .who { font-weight: 800; }
+  .review .when { color: #8a7a6c; font-size: 14px; }
+  footer { margin-top: 50px; padding: 30px 20px; text-align: center; background: #2b211b; color: #d9cdbd; font-size: 14px; }
+  .notice { max-width: 980px; margin: 20px auto 0; padding: 14px 20px; border-radius: 14px; background: #fff3d6; border: 1px solid #e8c983; }
+  @media (max-width: 640px) { header nav { display: none; } }
+</style>
+</head>
+<body>
+<header><div class="logo">Г</div><b>Громов и сыновья</b><nav><a href="#menu">Меню</a><a href="#places">Рестораны</a><a href="#team">Команда</a><a href="#reviews">Отзывы</a></nav></header>
+
+<div class="hero">
+  <h1>Как дома.<br>Только вкуснее.</h1>
+  <p>Семь ресторанов домашней кухни в Москве. Утка с яблоками, «Наполеон» по семейному рецепту и десерты без сахара для тех, кому нельзя сладкого.</p>
+  <a class="button" href="#places">Забронировать стол</a>
+</div>
+
+<div class="notice"><b>Объявление.</b> С глубоким прискорбием сообщаем, что в ночь на воскресенье скончался основатель сети Виктор Сергеевич Громов. Ресторан «Громов на Садовой» временно закрыт. Прощание — во вторник.</div>
+
+<section id="about">
+  <h2>О нас</h2>
+  <p>Всё началось в 1998 году на Садовой. Виктор Громов открыл небольшой ресторан, где кормили так, как кормят дома. Сегодня «Громов и сыновья» — семь ресторанов по всей Москве и одна большая семья.</p>
+</section>
+
+<section id="menu">
+  <h2>Фирменные блюда</h2>
+  <div class="card">
+    <div class="dish"><b>Утка с печёными яблоками</b><span>1 290 ₽</span></div>
+    <div class="dish"><b>Пельмени ручной лепки</b><span>590 ₽</span></div>
+    <div class="dish"><b>Торт «Наполеон» по семейному рецепту</b><span>420 ₽</span></div>
+    <div class="dish"><b>Шоколадный мусс без сахара</b><span>460 ₽</span></div>
+    <p><small>Мусс без сахара готовится на эритрите — подойдёт гостям с диабетом. Рецепт шефа Ольги Ким.</small></p>
+  </div>
+</section>
+
+<section id="places">
+  <h2>Рестораны</h2>
+  <div class="grid">
+    <div class="card"><h3>Громов на Садовой</h3><small>ул. Садовая, 21 · с 1998 года</small><p>+7 295 911-60-60</p></div>
+    <div class="card"><h3>Громов на Покровке</h3><small>Покровка, 8</small><p>+7 295 911-60-61</p></div>
+    <div class="card"><h3>Громов на Таганке</h3><small>Таганская, 31</small><p>+7 295 911-60-62</p></div>
+    <div class="card"><h3>Громов в Сокольниках</h3><small>Русаковская, 4</small><p>+7 295 911-60-63</p></div>
+  </div>
+</section>
+
+<section id="team">
+  <h2>Команда</h2>
+  <div class="grid">
+    <div class="card team"><img src="../06-case-box/faces/victor.jpg" alt=""><div><h3>Виктор Громов</h3><small>основатель, 1966–2026</small></div></div>
+    <div class="card team"><img src="../06-case-box/faces/kirill.jpg" alt=""><div><h3>Кирилл Громов</h3><small>управляющий сетью</small></div></div>
+    <div class="card team"><img src="../06-case-box/faces/olga.jpg" alt=""><div><h3>Ольга Ким</h3><small>шеф-повар с 2011 года</small></div></div>
+  </div>
+</section>
+
+<section id="reviews">
+  <h2>Отзывы гостей</h2>
+  <div class="card review"><div class="stars">★★★★★</div><p class="who">Ирина, подруга семьи <span class="when">· вчера</span></p><p>Были на юбилее Виктора Сергеевича, всё было прекрасно, светлая ему память. Одно запомнилось: попросила у шефа попробовать её знаменитый мусс без сахара — она прямо отрезала: «Нельзя, это только для Виктора Сергеевича». А после десерта отпустила всех поваров и одна мыла посуду до ночи. Вот это преданность.</p></div>
+  <div class="card review"><div class="stars">★★★☆☆</div><p class="who">Пётр Ильич <span class="when">· месяц назад</span></p><p>Хожу на Садовую с девяностых. Тут раньше было кафе «У Лебедевых», пирожки там пекли — не чета нынешним. Хозяин был душевный, жаль, прогорел. Сейчас дорого, но утка хорошая.</p></div>
+  <div class="card review"><div class="stars">★★★★★</div><p class="who">Анна <span class="when">· 2 месяца назад</span></p><p>Лучший «Наполеон» в Москве. Отдельное спасибо за десерты без сахара — у мамы диабет, впервые за много лет поела сладкое в ресторане.</p></div>
+</section>
+
+<footer>© 1998–2026 «Громов и сыновья». Все персонажи и события вымышлены, сайт — часть игры «Дело в коробке».</footer>
+</body>
+</html>
