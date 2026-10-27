@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#14202e" />
+    <!-- iPhone Safari has no page fullscreen; launched from the home screen the game opens without browser bars. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Сквозь века: битва эпох</title>
+    <style>html,body{background:#14202e;height:100%;margin:0;overflow:hidden}#app{position:fixed;inset:0;overflow:hidden}#scene{touch-action:none;width:100%;height:100%;display:block}#boot{z-index:50;color:#f4f7facc;background:radial-gradient(at 50% 40%,#2d5a86,#14202e 70%);place-items:center;font:600 15px Rubik,system-ui,-apple-system,Segoe UI,sans-serif;transition:opacity .6s;display:grid;position:fixed;inset:0}#boot.done{opacity:0;pointer-events:none}#boot .boot-box{flex-direction:column;align-items:center;gap:14px;display:flex}#boot .boot-title{text-align:center;opacity:0;letter-spacing:.04em;text-transform:uppercase;background:linear-gradient(#fff1a8,#ffd45c 50%,#e89a1e);color:#0000;filter:drop-shadow(1.5px 0 #3a2208)drop-shadow(-1.5px 0 #3a2208)drop-shadow(0 -1.5px #3a2208)drop-shadow(0 3px #3a2208);-webkit-background-clip:text;background-clip:text;max-width:calc(100vw - 32px);min-height:60px;font-size:36px;font-weight:800;line-height:1.1;transition:opacity .5s}#boot .boot-title:not(:empty){opacity:1}#boot .boot-sub{text-align:center;letter-spacing:.04em;opacity:.85;background:inherit;-webkit-background-clip:text;background-clip:text;margin-top:2px;font-size:.55em;display:block}#boot .boot-text{text-align:center;letter-spacing:.02em;min-height:20px}#boot .boot-bar{background:#ffffff26;border-radius:3px;width:180px;height:6px;overflow:hidden}#boot .boot-bar i{transform-origin:0;background:linear-gradient(90deg,#ffd45c,#ff9f2e);border-radius:3px;height:100%;transition:transform .4s ease-out;display:block;transform:scaleX(.06)}#boot .emblem{width:128px;height:128px;position:relative}#boot .emblem>*{position:absolute}#boot .glow{background:radial-gradient(circle,#ffc85a47,#ffc85a00 65%);border-radius:50%;animation:1.5s ease-out infinite boot-glow;inset:-30px}#boot .ring{animation:14s linear infinite boot-turn;inset:0}#boot .ring svg,#boot .disc svg,#boot .era svg{width:100%;height:100%;display:block}#boot .disc{inset:14px}#boot .burst{opacity:0;border:2px solid #ffd45ccc;border-radius:50%;animation:1.5s ease-out infinite boot-burst;inset:14px}#boot .era{opacity:0;width:76px;height:76px;animation:7.5s ease-out infinite backwards boot-era;top:26px;left:26px}#boot .era.e1{animation-delay:1.5s}#boot .era.e2{animation-delay:3s}#boot .era.e3{animation-delay:4.5s}#boot .era.e4{animation-delay:6s}#boot .spark{opacity:0;background:#ffcf5a;border-radius:50%;width:4px;height:4px;animation:2.4s ease-out infinite boot-spark;box-shadow:0 0 6px 2px #ffaa3c99}#boot .spark.k1{top:96px;left:22px}#boot .spark.k2{animation-delay:.8s;top:100px;left:100px}#boot .spark.k3{animation-delay:1.6s;top:112px;left:64px}#boot .timeline{width:156px;height:14px;position:relative}#boot .timeline>*{position:absolute}#boot .timeline .line{background:#ffd45c4d;border-radius:1px;height:2px;top:6px;left:6px;right:6px}#boot .timeline .dot{background:#3a5878;border-radius:50%;width:8px;height:8px;margin-left:-4px;top:3px;box-shadow:inset 0 0 0 1.5px #ffd45c99}#boot .timeline .mark{background:#ffd45c;border-radius:50%;width:16px;height:16px;margin-left:-4px;animation:7.5s ease-in-out infinite boot-mark;top:-1px;left:2px;box-shadow:0 0 10px 3px #ffbe4699}@keyframes boot-turn{to{transform:rotate(360deg)}}@keyframes boot-era{0%{opacity:0;transform:scale(.4)rotate(-25deg)}3%{opacity:1;transform:scale(1.15)rotate(4deg)}6%{transform:scale(1)rotate(0)}17%{opacity:1;transform:scale(1)rotate(0)}20%,to{opacity:0;transform:scale(.7)rotate(10deg)}}@keyframes boot-burst{0%{opacity:.9;transform:scale(.85)}40%,to{opacity:0;transform:scale(1.35)}}@keyframes boot-glow{0%{opacity:1}60%,to{opacity:.55}}@keyframes boot-spark{0%{opacity:0;transform:translate(0)}15%{opacity:1}to{opacity:0;transform:translate(6px,-70px)}}@keyframes boot-mark{0%,16%{transform:translate(0)}20%,36%{transform:translate(36px)}40%,56%{transform:translate(72px)}60%,76%{transform:translate(108px)}80%,96%{transform:translate(144px)}to{transform:translate(0)}}@media (min-width:640px) and (min-height:560px){#boot .emblem{margin:16px 0;transform:scale(1.25)}}@media (prefers-reduced-motion:reduce){#boot *{animation:none!important}#boot .era.e0{opacity:1}}</style>
+    <script type="module" crossorigin src="./assets/index-TxTTf-a_.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B5Iz0UxD.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+      <div id="vignette"></div>
+      <div id="ui"></div>
+    </div>
+    <div id="boot">
+      <div class="boot-box">
+        <div class="boot-title"></div>
+        <div class="emblem" aria-hidden="true">
+          <div class="glow"></div>
+          <div class="ring">
+            <svg viewBox="0 0 128 128">
+              <circle cx="64" cy="64" r="60" fill="none" stroke="#ffd45c" stroke-width="3" stroke-dasharray="14 8" opacity="0.85" />
+              <path d="M64 0 L68 8 L64 12 L60 8 Z M64 128 L68 120 L64 116 L60 120 Z M0 64 L8 60 L12 64 L8 68 Z M128 64 L120 60 L116 64 L120 68 Z" fill="#ffd45c" />
+            </svg>
+          </div>
+          <div class="disc">
+            <svg viewBox="0 0 100 100">
+              <defs><radialGradient id="dg" cx="0.5" cy="0.38" r="0.7"><stop offset="0" stop-color="#36628c" /><stop offset="1" stop-color="#16263a" /></radialGradient></defs>
+              <circle cx="50" cy="50" r="47" fill="url(#dg)" stroke="#ffd45c" stroke-width="3" />
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#ffd45c" stroke-width="1" opacity="0.35" />
+            </svg>
+          </div>
+          <div class="burst"></div>
+            <div class="era e0"><svg viewBox="0 0 64 64"><path d="M14 52 L38 22" stroke="#3a2208" stroke-width="9" stroke-linecap="round"/><path d="M14 52 L38 22" stroke="#a0662e" stroke-width="5.5" stroke-linecap="round"/><path d="M30 26 C30 14 44 8 52 14 C58 20 52 34 40 36 C34 36 30 32 30 26 Z" fill="#b87838" stroke="#3a2208" stroke-width="2.5"/><circle cx="42" cy="18" r="2.2" fill="#3a2208"/><circle cx="48" cy="26" r="2.2" fill="#3a2208"/><circle cx="37" cy="28" r="2" fill="#3a2208"/></svg></div>
+            <div class="era e1"><svg viewBox="0 0 64 64"><path d="M14 50 L46 18" stroke="#3a2208" stroke-width="7" stroke-linecap="round"/><path d="M16 48 L46 18" stroke="#e8eef6" stroke-width="3.5" stroke-linecap="round"/><path d="M12 40 L24 52" stroke="#3a2208" stroke-width="5" stroke-linecap="round"/><path d="M34 26 C42 24 50 24 54 26 C54 40 50 48 44 54 C38 48 34 40 34 26 Z" fill="#c0392b" stroke="#3a2208" stroke-width="2.5"/><path d="M44 30 V48 M37 36 H51" stroke="#ffd45c" stroke-width="3"/></svg></div>
+            <div class="era e2"><svg viewBox="0 0 64 64"><path d="M12 36 L46 22 L50 32 L16 46 Z" fill="#4a4f5a" stroke="#3a2208" stroke-width="2.5" stroke-linejoin="round"/><circle cx="48" cy="27" r="5" fill="#2a2d33" stroke="#3a2208" stroke-width="2"/><circle cx="26" cy="46" r="10" fill="#8a5a2a" stroke="#3a2208" stroke-width="2.5"/><circle cx="26" cy="46" r="3" fill="#ffd45c"/><path d="M26 36 V56 M16 46 H36" stroke="#3a2208" stroke-width="1.6"/></svg></div>
+            <div class="era e3"><svg viewBox="0 0 64 64"><rect x="10" y="38" width="44" height="12" rx="6" fill="#3e4a32" stroke="#3a2208" stroke-width="2.5"/><circle cx="18" cy="44" r="3" fill="#ffd45c"/><circle cx="28" cy="44" r="3" fill="#ffd45c"/><circle cx="38" cy="44" r="3" fill="#ffd45c"/><circle cx="48" cy="44" r="3" fill="#ffd45c"/><path d="M14 38 L18 30 H46 L50 38 Z" fill="#6b7f4a" stroke="#3a2208" stroke-width="2.5" stroke-linejoin="round"/><rect x="24" y="22" width="16" height="10" rx="4" fill="#6b7f4a" stroke="#3a2208" stroke-width="2.5"/><path d="M40 26 H56" stroke="#3a2208" stroke-width="5" stroke-linecap="round"/></svg></div>
+            <div class="era e4"><svg viewBox="0 0 64 64"><path d="M32 8 C42 16 44 30 40 44 H24 C20 30 22 16 32 8 Z" fill="#e8eef6" stroke="#3a2208" stroke-width="2.5"/><circle cx="32" cy="24" r="5" fill="#5fc8ff" stroke="#3a2208" stroke-width="2"/><path d="M24 36 L16 48 L25 46 Z M40 36 L48 48 L39 46 Z" fill="#c0392b" stroke="#3a2208" stroke-width="2" stroke-linejoin="round"/><path d="M26 46 C28 54 32 58 32 58 C32 58 36 54 38 46 Z" fill="#ff9f2e"/><path d="M29 46 C30 51 32 54 32 54 C32 54 34 51 35 46 Z" fill="#ffd45c"/></svg></div>
+          <div class="spark k1"></div>
+          <div class="spark k2"></div>
+          <div class="spark k3"></div>
+        </div>
+        <div class="timeline" aria-hidden="true">
+          <div class="line"></div>
+          <div class="dot" style="left: 6px"></div>
+          <div class="dot" style="left: 42px"></div>
+          <div class="dot" style="left: 78px"></div>
+          <div class="dot" style="left: 114px"></div>
+          <div class="dot" style="left: 150px"></div>
+          <div class="mark"></div>
+        </div>
+        <div class="boot-text"></div>
+        <div class="boot-bar"><i></i></div>
+      </div>
+    </div>
+  </body>
+</html>
